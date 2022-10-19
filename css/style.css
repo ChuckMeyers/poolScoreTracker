@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.colorImgs{
+    padding-left: 1.5rem;
+}
