@@ -11,13 +11,13 @@ let sevenBall = document.getElementById("sevenBall")
 let eightBall = document.getElementById("eightBall")
 let nineBall = document.getElementById('nineBall')
 
-oneBall.addEventListener("click", test)
+// oneBall.addEventListener("click", test)
 
-function test() {
-    if(oneBall.src="colorBallImgs/oneball.jpg"){
-        oneBall.src="colorBallImgs/oneballgrey.jpg";
-    }
-}
+// function test() {
+//     if(oneBall.src="colorBallImgs/oneball.jpg"){
+//         oneBall.src="colorBallImgs/oneballgrey.jpg";
+//     }
+// }
 
 
 
