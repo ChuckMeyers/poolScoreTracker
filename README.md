@@ -1,0 +1,1 @@
+A program for pool players to keep score while practicing 9-ball.
