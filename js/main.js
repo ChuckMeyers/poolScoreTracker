@@ -1,4 +1,12 @@
 
+
+
+
+
+
+
+
+
 //initialize variables for dom interaction with images
 const oneBall = document.getElementById("oneBall")
 const twoBall = document.getElementById("twoBall")
