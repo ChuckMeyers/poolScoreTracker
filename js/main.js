@@ -1,44 +1,38 @@
 
-
-
-
-
-
-
-
-
 //initialize variables for dom interaction with images
-const oneBall = document.getElementById("oneBall")
-const twoBall = document.getElementById("twoBall")
-const threeBall = document.getElementById("threeBall")
-const fourBall = document.getElementById("fourBall")
-const fiveBall = document.getElementById("fiveBall")
-const sixBall = document.getElementById("sixBall")
-const sevenBall = document.getElementById("sevenBall")
-const eightBall = document.getElementById("eightBall")
-const nineBall = document.getElementById('nineBall')
+const oneBall = document.getElementById("oneBall");
+const twoBall = document.getElementById("twoBall");
+const threeBall = document.getElementById("threeBall");
+const fourBall = document.getElementById("fourBall");
+const fiveBall = document.getElementById("fiveBall");
+const sixBall = document.getElementById("sixBall");
+const sevenBall = document.getElementById("sevenBall");
+const eightBall = document.getElementById("eightBall");
+const nineBall = document.getElementById('nineBall');
+
 
 // Display color ball images
-oneBall.src="colorBallImgs/oneball.jpg"
-twoBall.src="colorBallImgs/twoball.jpg"
-threeBall.src="colorBallImgs/threeball.jpg"
-fourBall.src="colorBallImgs/fourball.jpg"
-fiveBall.src="colorBallImgs/fiveball.jpg"
-sixBall.src="colorBallImgs/sixball.jpg"
-sevenBall.src="colorBallImgs/sevenball.jpg"
-eightBall.src="colorBallImgs/eightball.jpg"
-nineBall.src="colorBallImgs/nineball.jpg"
+oneBall.src="colorBallImgs/oneball.jpg";
+twoBall.src="colorBallImgs/twoball.jpg";
+threeBall.src="colorBallImgs/threeball.jpg";
+fourBall.src="colorBallImgs/fourball.jpg";
+fiveBall.src="colorBallImgs/fiveball.jpg";
+sixBall.src="colorBallImgs/sixball.jpg";
+sevenBall.src="colorBallImgs/sevenball.jpg";
+eightBall.src="colorBallImgs/eightball.jpg";
+nineBall.src="colorBallImgs/nineball.jpg";
 
 // Listener for ball img change
-oneBall.addEventListener("click", greyOne)
-twoBall.addEventListener("click", greyTwo)
-threeBall.addEventListener("click", greyThree)
-fourBall.addEventListener("click", greyFour)
-fiveBall.addEventListener("click", greyFive)
-sixBall.addEventListener("click", greySix)
-sevenBall.addEventListener("click", greySeven)
-eightBall.addEventListener("click", greyEight)
-nineBall.addEventListener("click", greyNine)
+oneBall.addEventListener("click", greyOne);
+twoBall.addEventListener("click", greyTwo);
+threeBall.addEventListener("click", greyThree);
+fourBall.addEventListener("click", greyFour);
+fiveBall.addEventListener("click", greyFive);
+sixBall.addEventListener("click", greySix);
+sevenBall.addEventListener("click", greySeven);
+eightBall.addEventListener("click", greyEight);
+nineBall.addEventListener("click", greyNine);
+// document.querySelectorAll(".balls").forEach(ball => ball.addEventListener('click', #))
 
 // Functions to handle switch between color/grey/dead when ball is clicked
 function greyOne() {
@@ -122,4 +116,70 @@ function greyNine() {
     }
 }
 
-// document.querySelectorAll(".balls").forEach(ball => ball.addEventListener('click', #))
+// Have player name input disappear on submit and display player's name displayed in the respective h2.
+
+// Make increment and decrement buttons add/subtract from players' total score
+let pOneCurrentScore = 0;
+let pTwoCurrentScore = 0;
+let playerOneScore = document.querySelector('.playerOneScore');
+let playerTwoScore = document.querySelector('.playerTwoScore');
+
+document.querySelector('.pOneIncrement').addEventListener('click', pOneIncrement);
+document.querySelector('.pOneDecrement').addEventListener('click', pOneDecrement);
+document.querySelector('.pTwoIncrement').addEventListener('click', pTwoIncrement);
+document.querySelector('.pTwoDecrement').addEventListener('click', pTwoDecrement);
+function pOneIncrement (){
+    pOneCurrentScore++
+    playerOneScore.innerHTML = `${pOneCurrentScore}`;
+}
+function pOneDecrement(){
+    pOneCurrentScore--
+    playerOneScore.innerHTML = `${pOneCurrentScore}`;
+}
+function pTwoIncrement(){
+    pTwoCurrentScore++
+    playerTwoScore.innerHTML = `${pTwoCurrentScore}`;
+}
+function pTwoDecrement(){
+    pTwoCurrentScore--
+    playerTwoScore.innerHTML = `${pTwoCurrentScore}`;
+}
+
+// Have Re-rack button reassign img.src to color images
+function reRack(){
+    oneBall.src="colorBallImgs/oneball.jpg"
+    twoBall.src="colorBallImgs/twoball.jpg"
+    threeBall.src="colorBallImgs/threeball.jpg"
+    fourBall.src="colorBallImgs/fourball.jpg"
+    fiveBall.src="colorBallImgs/fiveball.jpg"
+    sixBall.src="colorBallImgs/sixball.jpg"
+    sevenBall.src="colorBallImgs/sevenball.jpg"
+    eightBall.src="colorBallImgs/eightball.jpg"
+    nineBall.src="colorBallImgs/nineball.jpg"
+}
+document.querySelector(".reRack").addEventListener('click', reRack);
+
+// Have the new game button reset images, scores, and make all inputs visible again.
+function newGame(){
+    alert('Are you sure you want to start a new game?');
+    reRack();
+    pOneCurrentScore = 0;
+    pTwoCurrentScore = 0;
+    playerOneScore.innerHTML = `${pOneCurrentScore}`;  
+    playerTwoScore.innerHTML = `${pTwoCurrentScore}`;  
+}
+document.querySelector('#newGame').addEventListener('click', newGame)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
