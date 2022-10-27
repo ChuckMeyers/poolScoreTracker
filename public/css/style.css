@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.balls{
+    padding-left: 1.5rem;
+}
+
+#nineBall{
+    padding-right: 1.5rem;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    text-align: center;
+}
+
+.changeScore{
+    font-size: 25px;
+}
+
+.centerButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+
+}
+
+#lagWinner{
+    height: 30px;
+    font-size: 20px;
+}
+
+#lagButton{
+    margin: 0 0 20px 0
+}
+
+.buttons{
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 3px;
+}
