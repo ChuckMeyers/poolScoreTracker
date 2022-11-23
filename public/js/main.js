@@ -161,12 +161,16 @@ document.querySelector(".reRack").addEventListener('click', reRack);
 
 // Have the new game button reset images, scores, and make all inputs visible again.
 function newGame(){
-    alert('Are you sure you want to start a new game?');
-    reRack();
-    pOneCurrentScore = 0;
-    pTwoCurrentScore = 0;
-    playerOneScore.innerHTML = `${pOneCurrentScore}`;  
-    playerTwoScore.innerHTML = `${pTwoCurrentScore}`;  
+    if(window.confirm('Are you sure you want to start a new game?')){
+        reRack();
+        pOneCurrentScore = 0;
+        pTwoCurrentScore = 0;
+        playerOneScore.innerHTML = `${pOneCurrentScore}`;  
+        playerTwoScore.innerHTML = `${pTwoCurrentScore}`;  
+    }else {
+        return
+    };
+
 }
 document.querySelector('#newGame').addEventListener('click', newGame)
 
