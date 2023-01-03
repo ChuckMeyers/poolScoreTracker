@@ -3,20 +3,29 @@ body {
     justify-content: center;
 }
 
-
+main{
+    background-image: url("../background-imgs/background-img-1.jpg");
+    background-size: 100% auto ;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    color: white;
+}
 
 ul{
     display: flex;
+    justify-content: center;
     list-style: none;
     flex-wrap: wrap;
 }
 
 .balls{
-    padding-left: 1.5rem;
+    border-radius: 25px 25px 25px 25px;
+    
 }
 
-#nineBall{
-    padding-right: 1.5rem;
+.players{
+    width: 400px;
 }
 
 .scores{
@@ -38,17 +47,20 @@ ul{
 
 }
 
-#lagWinner{
-    height: 30px;
-    font-size: 20px;
-}
-
-#lagButton{
-    margin: 0 0 20px 0
+input{
+    height: 3rem;
+    width: 15rem;
+    border-radius: 10px;
+    
 }
 
 .buttons{
     margin-top: 10px;
     font-size: 20px;
     padding: 3px;
+}
+
+#player-one-submit, #player-two-submit{
+    font-size: 25px;
+    width: 10rem;
 }
