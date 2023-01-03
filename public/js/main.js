@@ -116,7 +116,35 @@ function greyNine() {
     }
 }
 
-// Have player name input disappear on submit and display player's name displayed in the respective h2.
+// Have input disappear on submit and display player's name displayed in the respective h2.
+document.querySelector('#player-one-submit').addEventListener('click', pOneApiRequest)
+document.querySelector('#player-two-submit').addEventListener('click', pTwoApiRequest)
+
+async function pOneApiRequest(){
+    const playerName = document.querySelector('.player-one-name-input').value
+    try{
+        const response = await fetch(`https://twin-peaks-freaks-api.herokuapp.com/api/${playerName}`)
+        const data = await response.json()
+
+        console.log(data)
+        document.querySelector('.pOneName').innerText = `${data.firstName} to make ${data.targetNumber}`
+    }catch(error){
+        console.log(error)
+    }
+}
+
+async function pTwoApiRequest(){
+    const playerName = document.querySelector('.player-two-name-input').value
+    try{
+        const response = await fetch(`https://twin-peaks-freaks-api.herokuapp.com/api/${playerName}`)
+        const data = await response.json()
+
+        console.log(data)
+        document.querySelector('.pTwoName').innerText = `${data.firstName} to make ${data.targetNumber}`
+    }catch(error){
+        console.log(error)
+    }
+}
 
 // Make increment and decrement buttons add/subtract from players' total score
 let pOneCurrentScore = 0;
@@ -166,7 +194,10 @@ function newGame(){
         pOneCurrentScore = 0;
         pTwoCurrentScore = 0;
         playerOneScore.innerHTML = `${pOneCurrentScore}`;  
-        playerTwoScore.innerHTML = `${pTwoCurrentScore}`;  
+        playerTwoScore.innerHTML = `${pTwoCurrentScore}`;
+        document.querySelector('.pOneName').innerText = '';
+        document.querySelector('.pTwoName').innerText = '';
+
     }else {
         return
     };
