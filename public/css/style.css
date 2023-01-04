@@ -25,6 +25,7 @@ ul{
 }
 
 .players{
+    font-size: 25px;
     width: 400px;
 }
 
@@ -37,21 +38,20 @@ ul{
 
 .changeScore{
     font-size: 25px;
+    width: 5rem;
 }
 
 .centerButtons{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
-
 }
 
 input{
     height: 3rem;
     width: 15rem;
     border-radius: 10px;
-    
+    font-size: 18px;
 }
 
 .buttons{
@@ -63,4 +63,5 @@ input{
 #player-one-submit, #player-two-submit{
     font-size: 25px;
     width: 10rem;
+    margin-top: 20px;
 }

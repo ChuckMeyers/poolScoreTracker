@@ -32,7 +32,6 @@ sixBall.addEventListener("click", greySix);
 sevenBall.addEventListener("click", greySeven);
 eightBall.addEventListener("click", greyEight);
 nineBall.addEventListener("click", greyNine);
-// document.querySelectorAll(".balls").forEach(ball => ball.addEventListener('click', #))
 
 // Functions to handle switch between color/grey/dead when ball is clicked
 function greyOne() {
@@ -116,7 +115,7 @@ function greyNine() {
     }
 }
 
-// Have input disappear on submit and display player's name displayed in the respective h2.
+// Fetch to display player's name and balls needed in the respective h2.
 document.querySelector('#player-one-submit').addEventListener('click', pOneApiRequest)
 document.querySelector('#player-two-submit').addEventListener('click', pTwoApiRequest)
 
@@ -127,7 +126,7 @@ async function pOneApiRequest(){
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('.pOneName').innerText = `${data.firstName} to make ${data.targetNumber}`
+        document.querySelector('.pOneName').innerText = `${data.firstName} needs ${data.targetNumber}`
     }catch(error){
         console.log(error)
     }
